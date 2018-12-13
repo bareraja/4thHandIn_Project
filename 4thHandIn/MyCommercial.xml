@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Advertisements xmlns:c="http://my.company.com">
+  <Ad>
+    <NavigateUrl>www.myfantasy.com</NavigateUrl>
+    <Impressions>(111) 22222222</Impressions>
+    <ImageUrl>logo1.svg</ImageUrl>
+    <MyView>0</MyView>
+    <AlternateText>Yensid Tlaw</AlternateText>
+  </Ad>
+  <Ad>
+    <NavigateUrl>www.myhugo.com</NavigateUrl>
+    <Impressions></Impressions>
+    <ImageUrl>logo2.svg</ImageUrl>
+    <MyView>0</MyView>
+    <AlternateText>Tinycomp</AlternateText>
+  </Ad>
+  <Ad>
+    <NavigateUrl>www.lotsofcartoons.com</NavigateUrl>
+    <Impressions>55+ 66666666</Impressions>
+    <ImageUrl>logo3.svg</ImageUrl>
+    <MyView>0</MyView>
+    <AlternateText>Cartoons</AlternateText>
+  </Ad>
+  <Ad>
+    <NavigateUrl>www.superstudents.com</NavigateUrl>
+    <Impressions></Impressions>
+    <ImageUrl>logo4.svg</ImageUrl>
+    <MyView>0</MyView>
+    <AlternateText>Web Developers</AlternateText>
+  </Ad>
+</Advertisements>
