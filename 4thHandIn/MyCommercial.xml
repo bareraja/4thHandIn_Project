@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Advertisements xmlns:c="http://my.company.com">
+<?xml version="1.0" standalone="yes"?>
+<Advertisements>
   <Ad>
     <NavigateUrl>www.myfantasy.com</NavigateUrl>
     <Impressions>(111) 22222222</Impressions>
@@ -9,7 +9,7 @@
   </Ad>
   <Ad>
     <NavigateUrl>www.myhugo.com</NavigateUrl>
-    <Impressions></Impressions>
+    <Impressions>333333333333</Impressions>
     <ImageUrl>logo2.svg</ImageUrl>
     <MyView>0</MyView>
     <AlternateText>Tinycomp</AlternateText>
@@ -23,7 +23,7 @@
   </Ad>
   <Ad>
     <NavigateUrl>www.superstudents.com</NavigateUrl>
-    <Impressions></Impressions>
+    <Impressions />
     <ImageUrl>logo4.svg</ImageUrl>
     <MyView>0</MyView>
     <AlternateText>Web Developers</AlternateText>

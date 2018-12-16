@@ -183,7 +183,7 @@ namespace _4thHandIn
                 LabelActors = LabelActors.Text,
                 LabelAwards = LabelAwards.Text,
                 LabelYear = LabelYear.Text,
-                LabelTitle = LabelTitle.Text,
+                LabelTitel = LabelTitle.Text,
                 ImageUrl = ImagePoster.ImageUrl,
                 LabelResults = LabelResult.Text
             };
@@ -209,7 +209,9 @@ namespace _4thHandIn
             public string ImageUrl { get; set; }
             public string LabelAwards { get; set; }
             public string LabelYear { get; set; }
-            public string LabelTitle { get; set; }
+            public string LabelTitel { get; set; }
+            public string LabelPosterYear { get; set; }
+
         }
 
 

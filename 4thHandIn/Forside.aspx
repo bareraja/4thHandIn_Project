@@ -15,7 +15,7 @@
 
     .salt{
         margin-right: 218px;
-
+        font-size: x-large;
     }
      .collapse ul li {
     list-style: none;
@@ -323,26 +323,50 @@ color:white;
         <div class="col-xs-12 col-lg-3 movie">
             <asp:Image ID="ImagePoster1" runat="server" Width="260px"  />
             <h2>
-         <asp:Label ID="Label1Poster" Class="salt" runat="server" Text="Label"></asp:Label>
+         <asp:Label ID="Label1Poster" Class="salt" runat="server" Text="Label" ForeColor="White"></asp:Label>
             </h2>
+            <p>
+         <asp:Label ID="LabelPoster1" Class="salt" runat="server" Text="Label" ForeColor="White"></asp:Label>
+            </p>
+            <p>
+                <asp:Button ID="Button1" class="btn btn-danger" runat="server" OnClick="Button1_Click" Text="Button" />
+            </p>
             </div>
         <div class=" col-xs-12 col-lg-3  movie">
             <asp:Image ID="ImagePoster2" runat="server" Width="260px"  />
             <h2>
-       <asp:Label ID="Label2Poster" Class="salt" runat="server" Text="Label"></asp:Label>
+       <asp:Label ID="Label2Poster" Class="salt" runat="server" Text="Label" ForeColor="White"></asp:Label>
             </h2>
+            <p>
+         <asp:Label ID="LabelPoster2" Class="salt" runat="server" Text="Label" ForeColor="White"></asp:Label>
+            </p>
+            <p>
+                <asp:Button ID="Button2" CssClass="btn btn-danger" runat="server" OnClick="Button2_Click" Text="Button" />
+            </p>
     </div>
         <div class=" col-xs-12 col-lg-3  movie">
             <asp:Image ID="ImagePoster3" runat="server" Width="260px"  />
             <h2>
-       <asp:Label ID="Label3Poster" Class="salt" runat="server" Text="Label" style="text-align: left"></asp:Label>
+       <asp:Label ID="Label3Poster" Class="salt" runat="server" Text="Label" style="text-align: left" ForeColor="White"></asp:Label>
             </h2>
+            <p>
+         <asp:Label ID="LabelPoster3" Class="salt" runat="server" Text="Label" ForeColor="White"></asp:Label>
+            </p>
+            <p>
+                <asp:Button ID="Button3" CssClass="btn btn-danger" runat="server" OnClick="Button3_Click" Text="Button" />
+            </p>
            </div>
         <div class=" col-xs-12 col-lg-3  movie">
         <asp:Image ID="ImagePoster4" runat="server" Width="260px" />
             <h2>
-      <asp:Label ID="Label4Poster" Class="salt" runat="server" Text="Label"></asp:Label>
+      <asp:Label ID="Label4Poster" Class="salt" runat="server" Text="Label" ForeColor="White"></asp:Label>
             </h2>
+            <p>
+         <asp:Label ID="LabelPoster4" Class="salt" runat="server" Text="Label" ForeColor="White"></asp:Label>
+            </p>
+            <p>
+                <asp:Button ID="Button4" CssClass="btn btn-danger" runat="server" OnClick="Button4_Click" Text="Button" />
+            </p>
            </div>
             </div>
           </div>
@@ -355,7 +379,6 @@ color:white;
             <br />
             <br />
             &nbsp;&nbsp;
-            <asp:Label ID="Label2" runat="server" Font-Size="X-Large" Text="NY MOVIE" ForeColor="White"></asp:Label>
             &nbsp;<br />
         <br />
 &nbsp;

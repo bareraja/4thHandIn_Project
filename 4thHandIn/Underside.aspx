@@ -50,12 +50,21 @@
 @media only screen 
     and (device-width : 375px) 
     and (device-height : 812px) 
-    and (-webkit-device-pixel-ratio : 3) { 
+    and (-webkit-device-pixel-ratio : 3) {
 
+        .Labels
+        {
 
+            margin: 0px 0px 10px -29px;
+        }
 
 
 }
+
+
+
+
+
 
 
 </style>
@@ -121,24 +130,32 @@
         &nbsp;
             <br />
             <br />
+        
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="LabelTitle" runat="server" ForeColor="White" style="font-size: x-large"></asp:Label>
+        
+            <asp:Label ID="LabelTitle"  runat="server" ForeColor="White" style="font-size: x-large"></asp:Label>
             <br />
+                </div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="LabelYear" runat="server" ForeColor="White" style="font-size: x-large"></asp:Label>
 &nbsp;
             <br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="LabelActors" runat="server" Text="Actor" ForeColor="White" style="font-size: large"></asp:Label>
+            <asp:Label ID="LabelActors" class="Labels" runat="server" Text="Actor" ForeColor="White" style="font-size: large"></asp:Label>
+        <br />
 &nbsp;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="LabelAwards" runat="server" Text="Awards" ForeColor="White" style="font-size: large"></asp:Label>
+            <asp:Label ID="LabelAwards" class="Labels" runat="server" Text="Awards" ForeColor="White" style="font-size: large"></asp:Label>
+            <br />
             &nbsp;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="LabelResult" runat="server" Text="Ratings" ForeColor="White" style="font-size: large"></asp:Label>
+            <asp:Label ID="LabelResult" class="Labels" runat="server" Text="Ratings" ForeColor="White" style="font-size: large"></asp:Label>
+               
+        
+            
             <br />
             <br />
             <br />

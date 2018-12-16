@@ -67,6 +67,8 @@ namespace _4thHandIn
                 string s = "";
 
                 List<string> urls = new List<string>();
+                List<string> myTitle = new List<string>();
+                List<string> myYear = new List<string>();
                 if (rdr.HasRows) {
                     while (rdr.Read()) {
                         int movId = rdr.GetInt32(0);
@@ -76,7 +78,10 @@ namespace _4thHandIn
 
                         // string posterUrl = MovieUtils.GetPosterUrlFromOmdb(movTitle);
                         MovieInfo info = GetPosterUrl(movTitle);
+
                         urls.Add(info.ImageUrl);
+                        myTitle.Add(info.LabelTitel);
+                        myYear.Add(info.LabelPosterYear);
                         //s = s + "The Movie ID is: "+ movId + ", The Title is: "+ movTitle + ", The year: ("+ movYear + "), it has been viewed "+ movViewed + " times<br>";
                     }
 
@@ -84,22 +89,37 @@ namespace _4thHandIn
                     ImagePoster2.ImageUrl = urls[1];
                     ImagePoster3.ImageUrl = urls[2];
                     ImagePoster4.ImageUrl = urls[3];
+
+                    Label1Poster.Text = myTitle[0];
+                    Label2Poster.Text = myTitle[1];
+                    Label3Poster.Text = myTitle[2];
+                    Label4Poster.Text = myTitle[3];
+
+                    LabelPoster1.Text = myYear[0];
+                    LabelPoster2.Text = myYear[1];
+                    LabelPoster3.Text = myYear[2];
+                    LabelPoster4.Text = myYear[3];
+
+
                 }
                 else {
                     s = "No rows found.";
                 }
 
+
+
             }
             catch (Exception ex) {
-               
+              
             }
             finally {
                 conn.Close();
             }
 
+
         }
 
-       
+
 
 
 
@@ -174,7 +194,6 @@ namespace _4thHandIn
             string result = "";
             string myTitle = "";
             string mySelection = "";
-            string myYear = "";
             // if the textbox is not a empty string then go, else make mySelection = to the session["myMovie"]
             if (movieName != "") mySelection = movieName.Replace(' ', '+');
             else mySelection = (string)Session["myMovie"];
@@ -184,11 +203,9 @@ namespace _4thHandIn
 
             string[] separatingChars = { "\":\"", "\",\"", "\":[{\"", "\"},{\"", "\"}]\"", "{\"", "\"}" };
             string[] mysplit = result.Split(separatingChars, System.StringSplitOptions.RemoveEmptyEntries);
-            
 
             if (mysplit[1] != "False") {
-                movieInfo.LabelYear = "Movie found";
-
+                movieInfo.LabelYear += "Movie found";
                 for (int i = 0; i < mysplit.Length; i++) {
                     if (mysplit[i] == "Poster") {
                         movieInfo.ImageUrl = mysplit[++i];
@@ -196,43 +213,49 @@ namespace _4thHandIn
                     }
                 }
 
-                for (int i = 0; i < mysplit.Length; i++) {
-                    if (mysplit[i] ==  "Title") {
-                        myTitle  = mysplit[++i];
-                        
-
-                        break;
-                    }
-                }
-                Label1Poster.Text = myTitle;
-              
-
 
                 for (int i = 0; i < mysplit.Length; i++) {
                     if (mysplit[i] == "Title") {
-                        myTitle = mysplit[++i];
+                        movieInfo.LabelTitel = mysplit[++i];
                         break;
                     }
                 }
-                Label2Poster.Text = myTitle;
 
                 for (int i = 0; i < mysplit.Length; i++) {
-                    if (mysplit[i] == "Title") {
-                        myTitle = mysplit[++i];
+                    if (mysplit[i] == "Year") {
+                        movieInfo.LabelPosterYear = "(" + mysplit[++i] + ")";
                         break;
                     }
                 }
-                Label3Poster.Text =  myTitle;
 
-                for (int i = 0; i < mysplit.Length; i++) {
-                    if (mysplit[i] == "Title") {
-                        myTitle = mysplit[++i];
-                        break;
-                    }
-                }
-                Label4Poster.Text =  myTitle;
             }
             return movieInfo;
+
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session["myMovie"] = Label1Poster.Text;
+            Response.Redirect("~/Underside.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Session["myMovie"] = Label2Poster.Text;
+            Response.Redirect("~/Underside.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Session["myMovie"] = Label3Poster.Text;
+            Response.Redirect("~/Underside.aspx");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Session["myMovie"] = Label4Poster.Text;
+            Response.Redirect("~/Underside.aspx");
         }
     }
 }
